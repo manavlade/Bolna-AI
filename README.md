@@ -50,7 +50,3 @@ You can modify the configuration variables at the top of `tracker.py`:
 
 - **STATUS_URL**: The endpoint for the status JSON (default: official OpenAI Status API).
 - **CHECK_INTERVAL**: Time in seconds between checks (default: `60`).
-
-## License
-
-This project is open-source and available under the MIT License.
