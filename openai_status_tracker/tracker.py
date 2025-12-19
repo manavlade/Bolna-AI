@@ -6,7 +6,7 @@ import sys
 from datetime import datetime, timezone
 
 STATUS_URL = "https://status.openai.com/api/v2/incidents.json"
-CHECK_INTERVAL = 60  # Checks every 60 seconds
+CHECK_INTERVAL = 60  # Check every 60 seconds
 
 def fetch_incidents(last_etag=None, last_modified=None):
     """
@@ -92,7 +92,6 @@ def main():
                             if created_at_dt > started_at:
                                 status_text = update.get("status", "updated")
                                 body = update.get("body", "")
-                                
                                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                                 print(f"[{timestamp}] Product: {incident_name}")
                                 print(f"Status: {status_text} - {body}")
